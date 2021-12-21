@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script type="module">
+      import { c, html } from "https://cdn.skypack.dev/atomico";
+
+      function component() {
+        return html`
+          <host>
+            <p>I'm going to be hydrated!</p>
+          </host>
+        `;
+      }
+
+      console.log("Hello from Module!");
+
+      customElements.define("custom-paragraph", c(component));
+    </script>
+  </head>
+  <body>
+    <custom-paragraph data-hydrate></custom-paragraph>
+  </body>
+</html>
